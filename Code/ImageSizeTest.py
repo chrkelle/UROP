@@ -13,6 +13,7 @@
 import os
 import shutil
 import glob
+import random
 from PIL import Image
 from resizeimage import resizeimage
 #**************************************#
@@ -61,11 +62,9 @@ def Image_Seperate(Folder_Contents):
         if(width > lowerWidth & width < upperWidth & height > lowerHeight & height < upperHeight):
              shutil.copy(File,os.path.join(os.getcwd(),folder)) 
         
-    
-    
 
 def main():
-        Folder_Contents = glob.glob('*.jpg')
+        Folder_Contents = (glob.glob('*.jpg') or glob.glob('*.JPG'))
         while(True):
             print("Menu")
             print("\n1 - Print folder contents")

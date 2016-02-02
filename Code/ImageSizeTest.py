@@ -13,7 +13,6 @@
 import os
 import shutil
 import glob
-import random
 from PIL import Image
 from resizeimage import resizeimage
 #**************************************#
